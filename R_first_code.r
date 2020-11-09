@@ -30,3 +30,5 @@ ecoset <- data.frame(primates, crabs)
 
 #summary of the dataframe
 summary(ecoset)
+
+
