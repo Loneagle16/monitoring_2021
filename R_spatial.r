@@ -27,3 +27,44 @@ bubble(meuse, "lead")
 
 # change the colour
 bubble(meuse, "lead", col="blue")
+
+library(ggplot2)
+
+# ecological dataframe
+# biofuels
+biofuels <- c(120, 200, 350, 570, 750) # array of values: c
+biofuels
+# oxydative enzimes 
+oxydative <- c(1200, 1300, 21000, 34000, 50000)
+oxydative
+
+# dataframe
+d <- data.frame(biofuels, oxydative)
+d
+
+ggplot(d, aes(x = biofuels, y = oxydative)) + geom_point()
+
+ggplot(d, aes(x = biofuels, y = oxydative)) + geom_point(size = 5, col = "blue")
+
+# lines 
+ggplot(d, aes(x = biofuels, y = oxydative)) + geom_line()
+
+# points + lines
+ggplot(d, aes(x = biofuels, y = oxydative)) + geom_point(size = 5, col = "blue") + geom_line()
+
+# polygons
+ggplot(d, aes(x = biofuels, y = oxydative)) + geom_polygon()
+
+# IMPORT DATA FROM AN EXTERNAL SOURCE
+# setwd("path/lab")
+
+# setdw for Windows
+setwd("C:/lab/")
+covid <- read.table("covid_agg.csv", header=TRUE)
+covid
+
+
+
+
+
+
