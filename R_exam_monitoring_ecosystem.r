@@ -31,17 +31,17 @@ plotRGB(saudiarabia4, r=1, g=2, b=3, stretch="Lin")
 # Difference Vegetation Index (DVI) 1987 [DVI=NIR(band2) - Red(band1)]
 dvi1 <- saudiarabia1$saudiarabia_tm5_1987036_lrg.2 - saudiarabia1$saudiarabia_tm5_1987036_lrg.1
 cl <- colorRampPalette(c('green2','yellow','darkorange','blue2'))(100)
-plot(dvi1, col=cl, main="Wadi As-Sirhan Basin 1987")
+plot(dvi1, col=cl, main="DVI Wadi As-Sirhan Basin 1987")
 
 # Difference Vegetation Index (DVI) 2012 agricultural fields
 dvi4 <- saudiarabia4$saudiarabia_etm_2012017_lrg.2 - saudiarabia4$saudiarabia_etm_2012017_lrg.1
 cl <- colorRampPalette(c('green2','yellow','darkorange','blue2'))(100)
-plot(dvi4, col=cl, main="Wadi As-Sirhan Basin 2012")
+plot(dvi4, col=cl, main="DVI Wadi As-Sirhan Basin 2012")
 
 # Images one beside the other one
 par(mfrow=c(1,2))
-plot(dvi1, col=cl, main="Wadi As-Sirhan Basin 1987")
-plot(dvi4, col=cl, main="Wadi As-Sirhan Basin 2012")
+plot(dvi1, col=cl, main="DVI Wadi As-Sirhan Basin 1987")
+plot(dvi4, col=cl, main="DVI Wadi As-Sirhan Basin 2012")
 
 # Difference in vegetation presence before and after agricultural operations in the desert
 difdvi <- dvi1 -dvi4
