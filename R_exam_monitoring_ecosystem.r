@@ -53,7 +53,7 @@ plot(difdvi, col=cldif, main="Evolution of agricultural operations")
 # Histogram of difdvi
 hist(difdvi, col="springgreen4", main="difference DVI")
 
-# Final comparison with results of all analysis: saudiarabia 1987, saudiarabia 2012, dvi1, dvi4, difdvi, histogram
+# Final comparison with all results of analysis: saudiarabia 1987, saudiarabia 2012, dvi1, dvi4, difdvi, histogram
 par(mfrow=c(3,2))
 plotRGB(saudiarabia1, r=1, g=2, b=3, stretch="Lin")
 plotRGB(saudiarabia4, r=1, g=2, b=3, stretch="Lin")
